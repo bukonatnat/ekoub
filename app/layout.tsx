@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Literata } from "next/font/google";
 import "./globals.css";
 
 // Sidebar
 import Sidebar from "./components/sidebar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const literata = Literata({
+  variable: "--font-literata",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "ekoubuyoi",
@@ -28,11 +24,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${literata.variable} ${literata.className} h-full antialiased`}
     >
-      <body className="min-h-full md:py-20 md:px-96 gap-3 flex flex-row">
+      <body className="min-h-full md:py-20 md:px-96 gap-5 flex flex-row">
         <Sidebar />
-        <main className="flex-1">{children}</main>
+        <main className="font-literata flex-1 h-[80vh] overflow-y-auto bg-[#F9F7F2] shadow-[8px_8px_0px_0px_#282828] border-3 rounded-sm p-4">{children}</main>
       </body>
     </html>
   );

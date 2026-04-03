@@ -7,8 +7,8 @@ export default function Sidebar() {
   return (
     <div
       className={` 
-        bg-[#F9F7F2] w-20 border-3 rounded-sm p-4
-        transition-all duration-500 ease-in-out shadow-lg overflow-hidden
+        bg-[#F9F7F2] h-[80vh] border-3 rounded-sm p-4 
+        transition-all duration-500 ease-in-out shadow-[8px_8px_0px_0px_#282828] overflow-hidden 
         ${isExpanded ? "w-64" : "w-20"} `}
     >
       <h1> Sidebar </h1>
